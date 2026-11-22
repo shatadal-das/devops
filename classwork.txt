@@ -1,5 +1,6 @@
 terraform:
     - provision azure vm
+    - meta-arguments
     - modules
     - variables
     - provision using packer image of azure vm
