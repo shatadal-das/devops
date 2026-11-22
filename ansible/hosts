@@ -1,0 +1,7 @@
+[myservers]
+137.116.137.227
+4.194.1.37
+
+[myservers:vars]
+ansible_user=azureuser
+ansible_password=@zureUse5

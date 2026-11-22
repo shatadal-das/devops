@@ -1,0 +1,40 @@
+{
+    "variables": {
+        "client_id": "",
+        "tenant_id": "",
+        "client_secret": "",
+        "subscription_id": "",
+        "vm_size": "Standard_B2ats_v2"
+    },
+    "builders": [
+        {
+            "type": "azure-arm",
+            "client_id": "{{ user `client_id` }}",
+            "tenant_id": "{{ user `tenant_id` }}",
+            "client_secret": "{{ user `client_secret` }}",
+            "subscription_id": "{{ user `subscription_id` }}",
+
+            "image_publisher": "Canonical",
+            "image_offer": "UbuntuServer",
+            "image_sku": "18.04-LTS",
+
+            "location": "East Asia",
+            "os_type": "Linux",
+            "vm_size": "{{ user `vm_size` }}",
+            "managed_image_name": "my-custom-vm-image",
+            "managed_image_resource_group": "my-image-rg"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "sudo apt-get update -y",
+                "sudo apt-get install nginx -y",
+                "sudo systemctl enable nginx",
+                "sudo systemctl start nginx",
+                "echo '<h1>Hello World</h1>' > /var/www/html/index.html"
+            ]
+        }
+    ]
+}

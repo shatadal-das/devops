@@ -1,0 +1,27 @@
+terraform:
+    - provision azure vm
+    - modules
+    - variables
+    - provision using packer image of azure vm
+
+ansible:
+    - configure azure vm
+    - vault
+    - playbook
+    - setup nginx, mysql, php, apache web server
+
+packer:
+    - azure vm image
+    - variables
+    - builders: azure
+    - provisioners: shell
+    - setup nginx
+
+docker:
+    - create image of a spring boot web app, use maven
+    - multi-staged build
+
+----- Extras -----
+-> kubernetes
+-> git
+-> github

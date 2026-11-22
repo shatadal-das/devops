@@ -1,0 +1,61 @@
+Q. Short note on: Benefits of using Containerization and Virtualization.
+
+Q. Explain what version control is and why it is important in software development. Provide examples of version control systems
+ other than git.
+
+Q. Explain the significance of CI/CD in the context of web development. How does it benefit
+ the development process and end-users? Take as an example the project development work of last semester.
+
+Q. Draw the blueprint of DevOps Engineering and explain the importance and roles of each of the components in the blueprint.
+
+Q. How the following commands can be performed on Git. Create a scenario and write the steps along with commands
+    a. Adding a remote
+    b. Cloning a repo
+    c. Making changes and creating a branch and then merging it together
+
+Q. What is kubernetes? What are the key concepts in kubernetes? Draw kubernetes architecture. Create a kubernetes deployment YAML files
+ to deploy the web application.
+
+Q. Explain the following:
+    a. Guest Operating System v/s Host Operating System
+    b. Dynamizing code with Variables in Terraform
+    c. Terraform life cycle
+    d. Protecting data with Ansible vault
+
+Q. How Git can be used to collaborate with Remote Repositories? Write complete
+ step for collaborating with remote repository. List and explain five best practices
+ for effective and efficient Git usage in a collaborative software development
+ log. Normally under what circumstances these commands are executed.
+ environment. Explain the usage of following commands git status, git diff and git
+
+Q. How Ansible playbook can be integrated in a packer template? Write the complete code and complete steps for
+ generating the image through packer from this code.
+
+Q. What is docker? What are the various basic elements of a docker? Explain. Write the significance of the docker in modern context.
+ Write the complete step along with the code for creating a docker image of a web based application.
+
+Q. Elaborate automatic configuration mechanism using specific DevOps tool.
+
+Q. Identify the advantage of EC2 on comparing with the offline Linux machine.
+
+Q. What is the difference between terminating and stopping an EC2 instance?
+
+Q. Name the first process that is started by the kernel in Linux and what is its process id?
+
+Q. Explain the following along with respective usage/commands
+    1. Azure Service Principal
+    2. Format and validate commands in terraform
+    3. Inventory in Ansible
+    4. Different level of Log Outputs in Ansible
+    5. Ansible playbook command
+
+Q. What is a virtual machine? Compare the script of terraform and ansible for creating a Windows virtual machine in Azure.
+
+Q. What is packer? Write the significance of the Packer tool. Write the structure of the packer template.
+
+Q. What are various ansible built-in modules? Explain use of File & System Management
+ and Package management built-in Ansible modules. Write sample script 
+ using ansible built-in modules for these operations
+    a. file & copy
+    b. apt & apt_repository
+

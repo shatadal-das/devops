@@ -1,0 +1,66 @@
+---
+  - name: Setup Nginx
+    hosts: myservers
+    become: true
+
+    tasks:
+      - name: Install nginx
+        apt:
+          name: nginx
+          state: present
+          update_cache: true
+      
+      - name: Start nginx
+        service:
+          name: nginx
+          state: started
+          enabled: true
+
+      - name: Edit index.html
+        copy:
+          content: "<h1>Hello from {{ ansible_host }}, nginx</h1>"
+          dest: /var/www/html/index.html
+          mode: "0644"
+
+
+  - name: Setup MySQL
+    hosts: myservers
+    become: true
+
+    tasks:
+      - name: Install MySQL
+        apt:
+          name: mysql-server
+          state: present
+          update_cache: true
+      
+      - name: Start MySQL
+        service:
+          name: mysql
+          state: started
+          enabled: true
+
+
+
+  - name: Setup Docker
+    hosts: myservers
+    become: true
+
+    tasks:
+      - name: Install Docker
+        apt:
+          name: docker.io
+          state: present
+          update_cache: true
+      
+      - name: Start Docker
+        service:
+          name: docker
+          state: started
+          enabled: true
+      
+      - name: Add user to docker group
+        user:
+          name: "{{ ansible_user }}"
+          groups: docker
+          append: true
